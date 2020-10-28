@@ -22,20 +22,20 @@
                            <li class="nav-item">
                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-table"></i></i> <span class="mini-dn">curriculum</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                <a href="" class="dropdown-item">View curriculum</a>
-                                 <a href="" class="dropdown-item">Add/View Subjects</a>
-                                 <a href="" class="dropdown-item">Add Units</a>
-                                 <a href="" class="dropdown-item">View Units</a>
-                                 <a href="" class="dropdown-item">Add Topics</a>
+                                <a href="{{url('admin/view-curriculum')}}" class="dropdown-item">View curriculum</a>
+                                 <a href="{{url('admin/add-subjects')}}" class="dropdown-item">Add/View Subjects</a>
+                                 <a href="{{url('admin/add-subjects-units')}}" class="dropdown-item">Add Units</a>
+                                 <a href="{{url('admin/view-subjects-units')}}" class="dropdown-item">View Units</a>
+                                 <a href="{{url('admin/add-topics')}}" class="dropdown-item">Add Topics</a>
                                 
                             </div>
                         </li>
                         <li class="nav-item">
                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-edit"></i> <span class="mini-dn">Manage User</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                <a href="" class="dropdown-item">Add User</a>
-                                 <a href="" class="dropdown-item">View Students</a>
-                                 <a href="" class="dropdown-item">View Teacher</a>
+                                <a href="{{url('admin/register')}}" class="dropdown-item">Add User</a>
+                                 <a href="{{url('admin/view-register-students')}}" class="dropdown-item">View Students</a>
+                                 <a href="{{url('admin/view-register-teacher')}}" class="dropdown-item">View Teacher</a>
                                <!--  <a href="dashboard-2.html" class="dropdown-item">Dashboard v.2</a>
                                 <a href="analytics.html" class="dropdown-item">Analytics</a>
                                 <a href="widgets.html" class="dropdown-item">Widgets</a> -->
@@ -44,9 +44,9 @@
                            <li class="nav-item">
                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-desktop"></i> <span class="mini-dn">Projects</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                 <a href="" class="dropdown-item">Add</a>
-                                 <a href="" class="dropdown-item">View/assign</a>
-                                 <a href="" class="dropdown-item">Evaluation</a>
+                                 <a href="{{url('admin/add-projects')}}" class="dropdown-item">Add</a>
+                                 <a href="{{url('admin/view-projects-assignments')}}" class="dropdown-item">View/assign</a>
+                                 <a href="{{url('admin/view-feedback')}}" class="dropdown-item">Evaluation</a>
                                <!--  <a href="dashboard-2.html" class="dropdown-item">Dashboard v.2</a>
                                 <a href="analytics.html" class="dropdown-item">Analytics</a>
                                 <a href="widgets.html" class="dropdown-item">Widgets</a> -->
@@ -55,8 +55,8 @@
                          <li class="nav-item">
                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-files-o"></i> <span class="mini-dn">Notice</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                 <a href="" class="dropdown-item">Add</a>
-                                 <a href="" class="dropdown-item">View</a>
+                                 <a href="{{url('admin/add-notice')}}" class="dropdown-item">Add</a>
+                                 <a href="{{url('admin/view-notice')}}" class="dropdown-item">View</a>
                                
                             </div>
                         </li>
