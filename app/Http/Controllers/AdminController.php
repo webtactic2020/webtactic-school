@@ -18,8 +18,9 @@ class AdminController extends Controller
     	return view('admin.curriculum.view_curriculum');
     }
 
-    public function addSubjects()
-    {
+    public function addSubjects(Request $request)
+    {	
+    	
     	return view('admin.curriculum.add_subjects');
     }
 

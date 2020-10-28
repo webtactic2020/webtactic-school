@@ -30,7 +30,8 @@
                                             <div class="col-lg-12">
                                                 <div class="all-form-element-inner">
                                         
-                                            
+                                                    <form method="post" action="" >
+                                                        
                                                              <div class="form-group-inner">
                                                             <div class="row">
                                                                 <div class="col-lg-3">
@@ -39,7 +40,7 @@
                                                                 <div class="col-lg-6">
 
 
-                                <input type="text" name="" class="form-control" placeholder="Subject Name">
+                                                                <input type="text" name="sub_name" class="form-control" placeholder="Subject Name">
 
                                                                 </div>
                                                             </div>
@@ -62,7 +63,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -112,27 +113,10 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-
-                   
-                              
-                                    
-                                     
-
-
-
-
                                                 <tr>
                                                     <td></td>
-                                                 
                                                     <td></td>
-                                                
-                                               
                                                 </tr>
-
-
-                                  
-                                             
-                     
                                             </tbody>
                                         </table>
                                     </div>

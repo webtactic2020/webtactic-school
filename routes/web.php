@@ -27,12 +27,12 @@ Route::get('/admin/dashboard', 'AdminController@dashboard');
 
 // AdminController Curriculum
 Route::get('/admin/view-curriculum', 'AdminController@curriculum');
-Route::get('/admin/add-subjects', 'AdminController@addSubjects');
+// Route::get('/admin/add-subjects', 'AdminController@addSubjects');
 Route::get('/admin/add-subjects-units', 'AdminController@addSubjectsUnits');
 Route::get('/admin/view-subjects-units', 'AdminController@viewSubjectsUnits');
 Route::get('/admin/add-topics', 'AdminController@addTopics');
 
-
+Route::match(['get', 'post'], '/admin/add-subjects', 'AdminController@addSubjects');
 // AdminController Manage User
 
 Route::get('/admin/register', 'AdminController@register');
