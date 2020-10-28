@@ -30,9 +30,10 @@
                                             <div class="col-lg-12">
                                                 <div class="all-form-element-inner">
                                         
-                                                    <form method="post" action="" >
+                                                    <form method="post" action="">
+                                                        {{ csrf_field() }}
                                                         
-                                                             <div class="form-group-inner">
+                                                        <div class="form-group-inner">
                                                             <div class="row">
                                                                 <div class="col-lg-3">
                                                                     <label class="login2 pull-right pull-right-pro">Subject Name</label>
@@ -80,6 +81,21 @@
             <div class="data-table-area mg-b-15">
                 <div class="container-fluid">
                     <div class="row">
+                        @if (\Session::has('success'))
+                            <div class="alert alert-success">
+                                <ul>
+                                    <li>{!! \Session::get('success') !!}</li>
+                                </ul>
+                            </div>
+                        @endif
+                        @if (\Session::has('warning'))
+                            <div class="alert alert-warning">
+                                <ul>
+                                    <li>{!! \Session::get('warning') !!}</li>
+                                </ul>
+                            </div>
+                        @endif
+
                         <div class="col-lg-12">
                             <div class="sparkline13-list shadow-reset">
                                 <div class="sparkline13-hd">
@@ -113,10 +129,12 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($subjects as $subject) 
                                                 <tr>
                                                     <td></td>
-                                                    <td></td>
+                                                    <td>{{ $subject->sub_name }}</td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>

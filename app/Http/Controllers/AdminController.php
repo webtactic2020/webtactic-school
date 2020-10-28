@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Subject;
+
 
 class AdminController extends Controller
 {
@@ -20,8 +22,23 @@ class AdminController extends Controller
 
     public function addSubjects(Request $request)
     {	
+        if ($request->method() =="GET") {
+            $subjects = Subject::orderBy('updated_at', 'desc')->get();
+    	   return view('admin.curriculum.add_subjects', compact('subjects'));
+        }
+        else if($request->method() =="POST") {
+
+            $subjectExists = Subject::where("sub_name", $request->sub_name)->first();
+
+            if ($subjectExists) {
+                return redirect('/admin/add-subjects')->with('warning', 'This Subject Already Exists!');
+            }
+            $subject = new Subject;
+            $subject->sub_name = $request->sub_name;
+            $subject->save();
+            return redirect('/admin/add-subjects')->with('success', 'Subject added successfully!');   ;
+        }
     	
-    	return view('admin.curriculum.add_subjects');
     }
 
     public function addSubjectsUnits()
